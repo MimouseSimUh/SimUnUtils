@@ -14,7 +14,7 @@ android {
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
-
+    apply plugin: 'com.github.dcendents.android-maven'
     buildTypes {
         release {
             minifyEnabled false

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/SimUnUtils.iml" filepath="$PROJECT_DIR$/SimUnUtils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/SimUhUtils.iml" filepath="$PROJECT_DIR$/SimUhUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/simunutilslib/simunutilslib.iml" filepath="$PROJECT_DIR$/simunutilslib/simunutilslib.iml" />
     </modules>
