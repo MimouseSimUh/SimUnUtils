@@ -4,9 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/SimUnUtils.iml" filepath="$PROJECT_DIR$/SimUnUtils.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://H:\Speech\SimUnUtils\app\app.iml" filepath="H:\Speech\SimUnUtils\app\app.iml" />
       <module fileurl="file://$PROJECT_DIR$/simunutilslib/simunutilslib.iml" filepath="$PROJECT_DIR$/simunutilslib/simunutilslib.iml" />
-      <module fileurl="file://H:\Speech\SimUnUtils\simunutilslib\simunutilslib.iml" filepath="H:\Speech\SimUnUtils\simunutilslib\simunutilslib.iml" />
     </modules>
   </component>
 </project>
