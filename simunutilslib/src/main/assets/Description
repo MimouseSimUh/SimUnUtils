@@ -1,0 +1,30 @@
+MimouseUtils_1.0版本说明：
+整个jar包下有两个文件夹和一个构建描述：
+    .base包下包含5个基类：(这些类仅适用于Android环境)
+    1.AppManager:APP 管理类，主要用于管理Activity的生命周期，在退出应用程序和activity时可能用到，使用这个类必须在Application中声明。
+    2.BaseActivity：所有activity的基类，主要实现activity中的功能模块化。
+    3.BaseFragment：所有Fragment的基类，主要实现Fragment中的功能模块化。
+    4.BaseGestureActivity：手势控制的activity基类，只要继承与该基类的activity可通过添加监听器的方式实现手势控制界面。
+    5.BasePresenter：Presenter类的基础接口，包含一个启动接口，MVP组件。
+    6.BaseView：View类的基础接口，包含一个设置Presenter的接口，MVP组件。
+    7.CloseByFlagActivity：通过标志关闭的Activity基类，只要继承该类后实现setFlag接口，便可通过Flag关闭activity，内部通过动态广播实现。
+
+    .encryption包下包含五种加密方法：
+    1.aes:(Advanced Encryption Standard)区块加密标准,此类实现了256位aes加密和解密
+        使用方法：新建MiAES对象并初始化，调用加密解密接口即可
+             String doEncrypt(String content,String password)：加密接口，content：加密内容；password：密码。
+             String doDecrypt(String content,String password)：解密接口，content：解密内容；password：密码。
+    2.AndroidKeyStoreRSA：Android专用加密方法，通过Android系统级密钥存储库存储密钥，使用非对称加密算法RSR对文件和文本加密，尚未封装完成。
+    3.androidkeystoresign：Android专用加密方法，通过比对Android系统级密钥存储库存储的密钥，验证用户是否合法，尚未封装完成。
+    4.md5：（MD5 Message-Digest Algorithm）MD5加密类,此类实现了32位MD5的加密算法
+            使用方法：新建MiMD5对象并初始化，调用加密接口即可
+                 String md5(String string)：计算字符串MD5值；string：需加密字符串。
+                 String md5(File file)：计算文件的 MD5 值；file：需加密文件
+                 String md5Nio(File file)：采用nio的方式,计算文件的 MD5 值；file：需加密文件
+                 String md5(String string, int times)对字符串多次MD5加密；string：需加密字符串。
+                 String md5(String string, String slat)：string+key（盐值key）然后进行MD5加密；string：需加密字符串；slat：盐值。
+    5.pbe:(Password Based Encryption)此类使用的算法为:PBEWITHMD5andDES算法，一般用于对密钥的加密
+            使用方法：a.新建MiPBE对象并初始化，b.新建byte[] salt对象并使用.getSalt()对其赋值；c.调用加密解密接口即可（注意加密的盐必须和解密的盐相同）
+                 String doEncrypt(String content,String password,byte[] salt)：加密接口，content：加密内容；password：密码；salt：盐。
+                 String doDecrypt(String content,String password,byte[] salt)：解密接口，content：解密内容；password：密码；salt：盐。
+                 byte[] getSalt()：获取盐。
